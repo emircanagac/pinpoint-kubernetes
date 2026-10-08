@@ -1,0 +1,65 @@
+apiVersion: v1
+entries:
+  pinpoint:
+  - apiVersion: v2
+    appVersion: 3.1.1
+    created: "2026-10-08T07:18:20.62053368Z"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.8.7
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.0.3
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 22.0.7
+    - condition: kafka.enabled,global.metric.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 32.4.3
+    - condition: pinot.enabled,global.metric.enabled
+      name: pinot
+      repository: https://raw.githubusercontent.com/apache/pinot/master/helm
+      version: 0.3.4
+    description: A Helm chart for deploying Pinpoint APM (Application Performance
+      Management) on Kubernetes.
+    digest: e8c6edd8f5dc0c0bd0dee8e17d55328e092a8d6dd82c68c4bfc5e40951ed031c
+    home: https://github.com/pinpoint-apm/pinpoint-kubernetes
+    icon: https://raw.githubusercontent.com/pinpoint-apm/pinpoint/v3.1.1/doc/images/NAVERPinpoint.png
+    keywords:
+    - apm
+    - pinpoint
+    - monitoring
+    - performance
+    - metrics
+    maintainers:
+    - email: thesadson@gmail.com
+      name: Emircan Agac
+    name: pinpoint
+    sources:
+    - https://github.com/pinpoint-apm/pinpoint
+    type: application
+    urls:
+    - https://github.com/emircanagac/pinpoint-kubernetes/releases/download/pinpoint-3.1.1/pinpoint-3.1.1.tgz
+    version: 3.1.1
+  pinpoint-hbase-stackable:
+  - apiVersion: v2
+    appVersion: 2.6.6
+    created: "2026-10-08T07:18:20.872446998Z"
+    description: Operator-managed distributed HBase/HDFS backend for Pinpoint; qualification
+      candidate.
+    digest: 15e626d0a13781e8ab12e480cc8a0e61eb33c14d8de0c74cb5f22423e4dd18c6
+    kubeVersion: '>=1.31.0-0 <1.37.0-0'
+    maintainers:
+    - email: thesadson@gmail.com
+      name: Emircan Agac
+    name: pinpoint-hbase-stackable
+    type: application
+    urls:
+    - https://github.com/emircanagac/pinpoint-kubernetes/releases/download/pinpoint-hbase-stackable-0.1.0/pinpoint-hbase-stackable-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-10-08T07:18:20.872452396Z"
